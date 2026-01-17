@@ -25,3 +25,7 @@ jobs:
       - name: Run tests
         working-directory: sample-app
         run: npm test
+
+      - name: Build project
+        working-directory: sample-app
+        run: npm run build
