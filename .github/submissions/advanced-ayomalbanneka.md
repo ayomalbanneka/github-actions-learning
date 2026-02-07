@@ -20,6 +20,8 @@
 
 ### Task 10: PR created with template & issue using template ✅
 ![alt text](image.png)
+<img width="907" height="799" alt="image" src="https://github.com/user-attachments/assets/f1299597-447f-4f24-bd1f-3bd7e2a135fe" />
+
 
 ## Notes
 Any challenges faced or additional context.
