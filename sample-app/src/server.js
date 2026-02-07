@@ -70,3 +70,4 @@ if (require.main === module) {
 }
 
 module.exports = app;
+// This allows the server to be imported for testing without starting it immediately.
