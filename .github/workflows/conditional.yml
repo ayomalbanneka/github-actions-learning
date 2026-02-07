@@ -1,0 +1,30 @@
+name: Conditional Execution Workflow
+
+on:
+    push:
+        branches: [main, develop]
+
+jobs:
+    conditional-job:
+        name: conditional-job
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Deploy (main only)
+              if: github.ref == 'refs/heads/main'
+              run: echo "Deploying to production..."
+
+            - name: Run tests (main only)
+              if: github.ref == 'refs/heads/main'
+              run: echo "Running tests for main branch..."
+
+    test-summary:
+        name: Test Summary
+        runs-on: ubuntu-latest
+        if: always()
+        steps:
+            - name: Summary step
+              run: echo "Test summary complete"
